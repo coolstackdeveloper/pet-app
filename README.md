@@ -22,6 +22,8 @@ Female
 
 # Pet app in action
 
+**`Note that this screenshot is based on current result returned by web service`**
+
 ![](main.png) 
 
 # Test Result
