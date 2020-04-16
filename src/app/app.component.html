@@ -1,0 +1,9 @@
+<ng-container *ngIf="errorMessage">
+    <app-alert [message]="errorMessage"></app-alert>
+</ng-container>
+<ng-container *ngFor="let petOwnerGroup of petOwners | groupBy: 'gender' | keyvalue">
+    <app-gender [gender]="petOwnerGroup.key"></app-gender>
+    <ng-container *ngFor="let pet of getPets(petOwnerGroup.value) | filter: { type:petFilterSearchTerm } | orderBy: 'name'">
+        <app-pet [pet]="pet"></app-pet>
+    </ng-container>
+</ng-container>
